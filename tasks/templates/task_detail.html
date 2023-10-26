@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Box Icons CSS -->
+    <!-- Iconos Css -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -30,15 +30,15 @@
       </a>
     </header>
 
-    <!-- Tasks -->
+    <!-- Tarjetas -->
     <section
       class="flex flex-1 flex-wrap justify-center gap-3 bg-[#fff0] w-10/12 md:w-11/12 h-full mb-3 rounded-2xl p-3 overflow-y-auto scrollbar-hide"
     >
-      <!-- Task card -->
+      <!-- Tarjeta de tarea -->
       <div class="w-full md:w-4/6 flex flex-col bg-white h-fit rounded-xl p-3">
         <!-- Top -->
         <div class="flex flex-row justify-between">
-          <!-- Left: Title and Description -->
+          <!-- Titulo y descipcion -->
           <div>
             <h1 class="text-green-500 font-semibold text-xl">
               {{ task.nombre }}
@@ -65,7 +65,7 @@
               {{ task.description }}
             </p>
           </div>
-          <!-- Right: Toggle complete mode -->
+          <!--alternar modo completo -->
           <a href="{% url 'toggle_complete' task.id %}">
             <i class="bx bx-check-circle bx-sm text-blue-500"></i>
             <!-- <i class='bx bxs-check-circle'></i> -->
@@ -73,7 +73,7 @@
         </div>
         <!-- Line -->
         <hr class="border-t border-gray-200 my-2" />
-        <!-- Bottom: Time and Date | Delete -->
+        <!-- Abajo: Hora y Fecha | Borrar -->
         <div class="flex flex-row justify-between">
           
           <h2 class="text-gray-500 font-bold">
@@ -92,7 +92,7 @@
       </div>
     </section>
 
-    <!-- Box Icons -->
+    <!-- Iconos Css -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </body>
 </html>

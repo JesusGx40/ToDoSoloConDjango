@@ -5,7 +5,7 @@
     <section
       class="flex flex-1 flex-wrap justify-center gap-3 bg-[#fff0] w-10/12 md:w-11/12 h-full mb-3 rounded-2xl p-3 overflow-y-auto scrollbar-hide"
     >
-      <!-- Task card -->
+      <!-- Tarjeta de tarea -->
       {% for task in tasks %}
       {% if task.completado%}
       <div
@@ -13,7 +13,7 @@
       >
         <!-- Top -->
         <div class="flex flex-row justify-between">
-          <!-- Left: Title and Description -->
+          <!-- Titulo y descipcion -->
           <div>
             <a href="{% url 'task_detail' task.id %}">
               <h1
@@ -26,14 +26,14 @@
               {{ task.description | slice:":35" }}
             </p>
           </div>
-          <!-- Right: Toggle complete mode -->
+          <!--alternar modo completo -->
           <a href="{% url 'toggle_complete' task.id %}">
             <i class="bx bxs-check-circle bx-sm text-green-500"></i>
           </a>
         </div>
         <!-- Line -->
         <hr class="border-t border-gray-200 my-2" />
-        <!-- Bottom: Time and Date | Delete -->
+        <!-- Abajo: Hora y Fecha | Borrar -->
         <div class="flex flex-row justify-between">
           <h2 class="text-blue-400 font-bold">
             Completada <i class="bx bxs-badge-check"></i>
@@ -54,7 +54,7 @@
       >
         <!-- Top -->
         <div class="flex flex-row justify-between">
-          <!-- Left: Title and Description -->
+          <!-- Titulo y descipcion -->
           <div>
             <a href="{% url 'task_detail' task.id %}">
               <h1 class="text-green-500 font-semibold text-xl">
@@ -65,7 +65,7 @@
               {{ task.description | slice:":35" }}...
             </p>
           </div>
-          <!-- Right: Toggle complete mode -->
+          <!--alternar modo completo -->
           <a href="{% url 'toggle_complete'  task.id %}">
             <i class="bx bx-check-circle bx-sm text-blue-500"></i>
             <!-- <i class='bx bxs-check-circle'></i> -->
@@ -74,7 +74,7 @@
         </div>
         <!-- Line -->
         <hr class="border-t border-gray-200 my-2" />
-        <!-- Bottom: Time and Date | Delete -->
+        <!-- Abajo: Hora y Fecha | Borrar -->
         <div class="flex flex-row justify-between">
           <h2 class="text-gray-500 font-bold">
             Due {{ task.due_date }} <span class="font-medium text-gray-400">{{ task.due_time }}</span>
